@@ -38,7 +38,7 @@ Create a new file called `config.json` in the `irc` folder. The template is as f
 
 ## Running
 
-Open a terminal in the direcrory and run `npm start`, `node .` or `node app.js`.
+Open a terminal in the direcrory and run `npm start` or `node src/app.js`.
 
 ## Author
 

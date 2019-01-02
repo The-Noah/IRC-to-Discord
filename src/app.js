@@ -8,7 +8,7 @@ irc.on("registered", message => {
   //console.log("[IRC] Message:", message);
 
   discordConfig.channelIDs.forEach(channelID => {
-    discord.channels.get(channelID).send(`[INFO] Listening on IRC channel ${ircConfig.channel}`);
+    discord.channels.get(channelID).send(`\[**INFO**] Listening on IRC channel ${ircConfig.channel}`);
   });
 });
 
