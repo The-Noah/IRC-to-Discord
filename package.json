@@ -1,0 +1,23 @@
+{
+  "name": "irc-to-discord",
+  "version": "1.0.0",
+  "description": "Log IRC message to Discord",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Noah/IRC-to-Discord.git"
+  },
+  "author": "The Noah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/The-Noah/IRC-to-Discord/issues"
+  },
+  "homepage": "https://github.com/The-Noah/IRC-to-Discord#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "irc": "^0.5.2"
+  }
+}
