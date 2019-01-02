@@ -14,9 +14,9 @@ Open a terminal on the folder and run `npm install`.
 
 ## Configuration Files
 
-### IRC
+Create a new file called `config.json` in the `src/irc` and `src/discord` folders. The templates are as follows.
 
-Create a new file called `config.json` in the `irc` folder. The template is as fallows.
+### IRC
 
 ```json
 {
