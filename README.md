@@ -1,4 +1,4 @@
-# IRC-to-Discord [![Build Status][build]](https://travis-ci.org/The-Noah/IRC-to-Discord) [![Node Version][node]](https://nodejs.org/en/blog/release/v10.13.0/) [![NPM Version][npm]](https://www.npmjs.com/package/npm/v/6.4.1) ![Version 2.0.1][version]
+# IRC-to-Discord [![Build Status][build]](https://travis-ci.org/The-Noah/IRC-to-Discord) [![Node Version][node]](https://nodejs.org/en/blog/release/v10.13.0/) [![NPM Version][npm]](https://www.npmjs.com/package/npm/v/6.4.1) ![Version 2.0.2][version]
 
 IRC is great, but there are many downsides. One of the big ones is once you disconnect, you can't see any new messages until you connect again which leads to you missing entire conversations. Some people solve this by creating loggers, which do work. But what I have done is created IRC to Discord, which uses Discord to log IRC messsages so you don't have to worry about a place to store them or provide them.
 
@@ -64,4 +64,4 @@ IRC to Discord is licensed under the MIT license. See the [LICENESE](LICENSE) fi
 [build]: https://travis-ci.org/The-Noah/IRC-to-Discord.png?branch=master
 [node]: https://img.shields.io/badge/node.js-v10.13.0-red.svg
 [npm]: https://img.shields.io/badge/npm-v6.4.1-red.svg
-[version]: https://img.shields.io/badge/version-2.0.1-blue.svg
+[version]: https://img.shields.io/badge/version-2.0.2-blue.svg
