@@ -2,9 +2,10 @@
   "name": "irc-to-discord",
   "version": "1.0.0",
   "description": "Log IRC message to Discord",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node .",
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",

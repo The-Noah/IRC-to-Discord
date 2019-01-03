@@ -38,7 +38,7 @@ Create a new file called `config.json` in the `src/irc` and `src/discord` folder
 
 ## Running
 
-Open a terminal in the direcrory and run `npm start` or `node src/app.js`.
+Open a terminal in the direcrory and run "`npm start`", "`node .`" or "`node src/app.js`".
 
 ## Author
 

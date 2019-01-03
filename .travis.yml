@@ -1,3 +1,5 @@
 language: node_js
-install:
+node_js:
+  - "10.13.0"
+before_install:
   - npm install -g npm@6.4.1
