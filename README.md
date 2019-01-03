@@ -17,7 +17,7 @@ It's easy to dive in, just follow the steps below!
 
 Open a terminal on the folder and run `npm install`.
 
-## Configuration Files
+## Configuration File
 
 Create a new file called `config.json`. The template is as follows.
 
@@ -51,7 +51,7 @@ Open a terminal in the direcrory and run "`npm start`", "`node .`" or "`node src
 # Acknowledgments
 
 * Author: [The Noah](https://github.com/The-Noah/ "The Noah's GitHub")
-* Packages
+* Packages Used
   * [IRC](https://www.npmjs.com/package/irc "IRC's NPM Page")
   * [Discord.js](https://www.npmjs.com/package/discord.js "Discord.js's NPM Page")
 
