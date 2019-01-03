@@ -20,8 +20,8 @@ client.on("message", message => {
     return;
   }
 
-  message = message.replace(message.mentions.members.first(), "");
-  message = message.trim();
+  message.content = message.content.replace(message.mentions.members.first(), "");
+  message.content = message.content.trim();
 
   console.log(`[Discord] Got ${message.content}`);
 
