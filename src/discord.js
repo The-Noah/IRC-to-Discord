@@ -1,6 +1,6 @@
 "use strict";
 
-const config = require("./config");
+const config = require("../config");
 
 const discord = require("discord.js");
 
@@ -9,7 +9,7 @@ const client = new discord.Client();
 client.on("ready", () => {
   console.log(`[Discord] Logged in as ${client.user.tag}`);
 
-  console.log(`[Discord] Invite to server: https://discordapp.com/api/oauth2/authorize?client_id=${config.clientID}&permissions=${config.permissions}&scope=bot`);
+  console.log(`[Discord] Invite to server: https://discordapp.com/api/oauth2/authorize?client_id=${config.discord.clientID}&permissions=${config.discord.permissions}&scope=bot`);
 });
 
 client.on("message", message => {
@@ -20,6 +20,6 @@ client.on("message", message => {
   }
 });
 
-client.login(config.token);
+client.login(config.discord.token);
 
 module.exports = client;

@@ -1,26 +1,29 @@
 "use strict";
 
-const ircConfig = require("./irc/config");
-const discordConfig = require("./discord/config");
+const config = require("../config");
 
-const irc = require("./irc/irc");
-const discord = require("./discord/discord");
+const irc = require("./irc");
+const discord = require("./discord");
 
 irc.on("registered", message => {
   //console.log("[IRC] Message:", message);
 
-  discordConfig.channelIDs.forEach(channelID => {
-    discord.channels.get(channelID).send(`\[**INFO**] Listening on IRC channel ${ircConfig.channel}`);
+  config.discord.channels.forEach(channel => {
+    channel.ircChannels.forEach(ircChannel => {
+      discord.channels.get(channel.id).send(`\[**INFO**] Listening on IRC channel ${ircChannel}`);
+    });
   });
 });
 
-irc.on(`message${ircConfig.channel}`, (from, message) => {
-  from = from.replace(/[^\x20-\x7E]/g, "");
-  message = message.replace(/[^\x20-\x7E]/g, "");
-  
-  console.log(`[IRC] ${from}: ${message}`);
-
-  discordConfig.channelIDs.forEach(channelID => {
-    discord.channels.get(channelID).send(`**${from}**: ${message}`);
+config.discord.channels.forEach(channel => {
+  channel.ircChannels.forEach(ircChannel => {
+    irc.on(`message${ircChannel}`, (from, message) => {
+      from = from.replace(/[^\x20-\x7E]/g, "");
+      message = message.replace(/[^\x20-\x7E]/g, "");
+    
+      console.log(`[${ircChannel}] ${from}: ${message}`);
+    
+      discord.channels.get(channel.id).send(`[${ircChannel}] **${from}**: ${message}`);
+    });
   });
 });
