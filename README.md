@@ -4,19 +4,19 @@
 
 # IRC-to-Discord
 
-Log IRC messages to Discord.
+IRC is great, but there is many downsides. One of the big ones is once you disconnect, you can't see any new messages until you connect again. Some people solve this by creating loggers, which work. But what I have done is created IRC to Discord, which uses Discord to log IRC messsages so you don't have to worry about a place to store them or provide them.
 
-## Setup
+# Setup
 
 Open the Discord developer page on their website and create a new application. Then create a bot for that application.
 
 Open a terminal on the folder and run `npm install`.
 
-## Configuration Files
+# Configuration Files
 
 Create a new file called `config.json` in the `src/irc` and `src/discord` folders. The templates are as follows.
 
-### IRC
+## IRC
 
 ```json
 {
@@ -25,7 +25,7 @@ Create a new file called `config.json` in the `src/irc` and `src/discord` folder
 }
 ```
 
-### Discord
+## Discord
 
 ```json
 {
@@ -36,14 +36,14 @@ Create a new file called `config.json` in the `src/irc` and `src/discord` folder
 }
 ```
 
-## Running
+# Running
 
 Open a terminal in the direcrory and run "`npm start`", "`node .`" or "`node src/app.js`".
 
-## Author
+# Author
 
 [The Noah](https://github.com/The-Noah/ "The Noah's GitHub")
 
-## License
+# License
 
 IRC to Discord is released under the MIT license. See the [LICENESE](LICENSE) file for details.
