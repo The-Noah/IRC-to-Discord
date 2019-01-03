@@ -9,7 +9,7 @@ const client = new discord.Client();
 client.on("ready", () => {
   console.log(`[Discord] Logged in as ${client.user.tag}`);
 
-  console.log(`Invite to server: https://discordapp.com/api/oauth2/authorize?client_id=${config.clientID}&permissions=${config.permissions}&scope=bot`);
+  console.log(`[Discord] Invite to server: https://discordapp.com/api/oauth2/authorize?client_id=${config.clientID}&permissions=${config.permissions}&scope=bot`);
 });
 
 client.on("message", message => {
