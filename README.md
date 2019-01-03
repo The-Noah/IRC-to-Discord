@@ -10,7 +10,7 @@ It's easy to dive in, just follow the steps below!
 
 * [Node.js](https://nodejs.org/ "Node.js Website") (v10.13.0 recommended)
 * NPM (v6.4.1 recommended)
-* [Discord Application and bot](https://discordapp.com/developers/applications/ "Discord Applications Page")
+* [Discord Application with bot](https://discordapp.com/developers/applications/ "Discord Applications Page")
 * Some free disk space
 
 ## Installing
