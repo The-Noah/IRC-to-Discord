@@ -15,6 +15,9 @@ irc.on("registered", message => {
 });
 
 irc.on(`message${ircConfig.channel}`, (from, message) => {
+  from = from.replace(/[^\x20-\x7E]/g, "");
+  message = message.replace(/[^\x20-\x7E]/g, "");
+  
   console.log(`[IRC] ${from}: ${message}`);
 
   discordConfig.channelIDs.forEach(channelID => {
