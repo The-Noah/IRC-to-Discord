@@ -7,8 +7,11 @@ const discord = require("discord.js");
 const client = new discord.Client();
 
 client.on("ready", () => {
-  console.log(`[Discord] Logged in as ${client.user.tag}`);
+  client.user.setStatus("online");
+  client.user.setActivity("IRC", {type: "LISTENING"});
 
+  console.log(`[Discord] Logged in as ${client.user.tag}`);
+  
   console.log(`[Discord] Invite to server: https://discordapp.com/api/oauth2/authorize?client_id=${config.discord.clientID}&permissions=${config.discord.permissions}&scope=bot`);
 });
 

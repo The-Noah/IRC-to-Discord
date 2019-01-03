@@ -27,3 +27,20 @@ config.discord.channels.forEach(channel => {
     });
   });
 });
+
+function exitHandler(options, exitCode){
+  console.log(`Exit code: ${exitCode}`);
+
+  discord.user.setStatus("invisible");
+  discord.user.setActivity("Offline");
+
+  irc.disconnect();
+
+  discord.destroy();
+
+  process.exit();
+}
+
+["beforeExit", "disconnect", "exit", "message", "uncaughtException", "unhandledRejection", "SIGINT", "SIGTERM", "SIGUSR1", "SIGUSR2", "SIGHUP", "SIGBREAK"].forEach((eventType) => {
+  process.on(eventType, exitHandler.bind(null, {exit: true}));
+});
