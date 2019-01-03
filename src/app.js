@@ -1,3 +1,5 @@
+"use strict";
+
 const ircConfig = require("./irc/config");
 const discordConfig = require("./discord/config");
 
