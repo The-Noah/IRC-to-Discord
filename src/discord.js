@@ -13,9 +13,16 @@ client.on("ready", () => {
 });
 
 client.on("message", message => {
-  if(message.content === '~ping'){
-    console.log(`[Discord] Got ${message.content}`);
+  if(message.mentions.users.first() !== client.user){
+    return;
+  }
 
+  message = message.replace(message.mentions.members.first(), "");
+  message = message.trim();
+
+  console.log(`[Discord] Got ${message.content}`);
+
+  if(message.content === 'ping'){
     message.channel.send("Pong");
   }
 });
