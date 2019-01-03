@@ -48,6 +48,8 @@ Create a new file called `config.json`. The template is as follows.
 
 Open a terminal in the direcrory and run "`npm start`", "`node .`" or "`node src/app.js`".
 
+Once you start the bot, it will provide an invite link to you. To check if it is still online send "ping" and mention the bot in the message, and it will respond saying "Pong" if it is online.
+
 # Acknowledgments
 
 * Author: [The Noah](https://github.com/The-Noah/ "The Noah's GitHub")
