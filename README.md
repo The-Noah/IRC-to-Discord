@@ -2,7 +2,7 @@
 
 IRC is commonly used for discussions and by the open-source community, however it does contain several disadvantages. One of them is while not joined messages are not received, thus causing one to possibly miss entire conversations and discussions. This can be solved with IRC bots which function as loggers, but this generally requires a complicated setup. Instead, a simpler and easier form is provided which takes advantage of Discord, it's capabilities to easily store messages for free.
 
-# Gettings Started
+# Getting Started
 
 It is easy to get started with the following steps.
 
@@ -19,7 +19,7 @@ Open up the terminal within the directory and run 'npm install' without quotes.
 
 ## Configuration File
 
-The configuration file should be called 'config.json' in order to run by default. The following is the template for the configuration file:
+The configuration file should be called `config.json` in order for it to run by default. The following is the template for the configuration file:
 
 ```json
 {
@@ -46,7 +46,7 @@ The configuration file should be called 'config.json' in order to run by default
 
 # Running
 
-Open the terminal within the directory and run either '`npm start`', '`node .`' or '`node src/app.js`' without the quotes.
+Open the terminal within the directory and run either `npm start`, `node .` or `node src/app.js`.
 
 One started, the bot will provide a Discord invite link. To check if the bot is online, send 'ping' and mention the bot within the message and if it is online, it will reply with a 'pong'.
 
