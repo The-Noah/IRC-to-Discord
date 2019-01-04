@@ -2,7 +2,7 @@
 
 IRC is commonly used for discussions and by the open-source community, however it does contain several disadvantages. One of them is while not joined messages are not received, thus causing one to possibly miss entire conversations and discussions. This can be solved with IRC bots which function as loggers, but this generally requires a complicated setup. Instead, a simpler and easier form is provided which takes advantage of Discord, it's capabilities to easily store messages for free.
 
-# Gettings Started
+# Getting Started
 
 It is easy to get started with the following steps.
 
