@@ -1,2 +1,8 @@
-node_modules
+# Configuration file(s)
 config.json
+
+# Node
+node_modules
+
+# Visual Studio Code
+.vscode
