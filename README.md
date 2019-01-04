@@ -19,7 +19,7 @@ Open up the terminal within the directory and run 'npm install' without quotes.
 
 ## Configuration File
 
-The configuration file should be called 'config.json' in order to run by default. The following is the template for the configuration file:
+The configuration file should be called `config.json` in order for it to run by default. The following is the template for the configuration file:
 
 ```json
 {
@@ -46,7 +46,7 @@ The configuration file should be called 'config.json' in order to run by default
 
 # Running
 
-Open the terminal within the directory and run either '`npm start`', '`node .`' or '`node src/app.js`' without the quotes.
+Open the terminal within the directory and run either `npm start`, `node .` or `node src/app.js`.
 
 One started, the bot will provide a Discord invite link. To check if the bot is online, send 'ping' and mention the bot within the message and if it is online, it will reply with a 'pong'.
 
