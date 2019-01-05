@@ -3,8 +3,6 @@ import config from "./config";
 import irc from "./irc";
 import {default as discord, send} from "./discord";
 
-import {TextChannel} from "discord.js";
-
 irc.on("registered", message => {
   //console.log("[IRC] Message:", message);
 
