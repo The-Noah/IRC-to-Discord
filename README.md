@@ -1,4 +1,4 @@
-# IRC to Discord [![Build Status][build]](https://travis-ci.org/The-Noah/IRC-to-Discord) [![Node Version][node]](https://nodejs.org/en/blog/release/v10.13.0/) [![NPM Version][npm]](https://www.npmjs.com/package/npm/v/6.4.1) ![Version 2.0.2][version]
+# IRC to Discord [![Build Status][build]](https://travis-ci.org/The-Noah/IRC-to-Discord) [![Node Version][node]](https://nodejs.org/en/blog/release/v10.13.0/) [![NPM Version][npm]](https://www.npmjs.com/package/npm/v/6.4.1) ![Version 2.0.3][version]
 
 IRC is commonly used for discussions and by the open-source community, however it does contain several disadvantages. One of them is while not joined messages are not received, thus causing one to possibly miss entire conversations and discussions. This can be solved with IRC bots which function as loggers, but this generally requires a complicated setup. Instead, a simpler and easier form is provided which takes advantage of Discord, it's capabilities to easily store messages for free.
 
@@ -65,4 +65,4 @@ IRC to Discord is licensed under the MIT License. See the included [LICENESE](LI
 [build]: https://travis-ci.org/The-Noah/IRC-to-Discord.png?branch=master
 [node]: https://img.shields.io/badge/node.js-v10.13.0-red.svg
 [npm]: https://img.shields.io/badge/npm-v6.4.1-red.svg
-[version]: https://img.shields.io/badge/version-2.0.2-blue.svg
+[version]: https://img.shields.io/badge/version-2.0.3-blue.svg
