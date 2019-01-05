@@ -1,16 +1,16 @@
-"use strict";
+import config from "./config";
 
-const config = require("../config");
+import irc from "./irc";
+import {default as discord, send} from "./discord";
 
-const irc = require("./irc");
-const discord = require("./discord");
+import {TextChannel} from "discord.js";
 
 irc.on("registered", message => {
   //console.log("[IRC] Message:", message);
 
   config.discord.channels.forEach(channel => {
     channel.ircChannels.forEach(ircChannel => {
-      discord.channels.get(channel.id).send(`\[**INFO**] Listening on IRC channel ${ircChannel}`);
+      send(discord.channels.get(channel.id), `\[**INFO**] Listening on IRC channel ${ircChannel}`);
     });
   });
 });
@@ -18,12 +18,13 @@ irc.on("registered", message => {
 config.discord.channels.forEach(channel => {
   channel.ircChannels.forEach(ircChannel => {
     irc.on(`message${ircChannel}`, (from, message) => {
+      // cleanup messages
       from = from.replace(/[^\x20-\x7E]/g, "");
       message = message.replace(/[^\x20-\x7E]/g, "");
     
       console.log(`[${ircChannel}] ${from}: ${message}`);
     
-      discord.channels.get(channel.id).send(`[${ircChannel}] **${from}**: ${message}`);
+      send(discord.channels.get(channel.id), `[${ircChannel}] **${from}**: ${message}`);
     });
   });
 });
@@ -34,13 +35,13 @@ function exitHandler(options, exitCode){
   discord.user.setStatus("invisible");
   discord.user.setActivity("Offline");
 
-  irc.disconnect();
-
-  discord.destroy();
-
-  process.exit();
+  irc.disconnect("Goodbye", () => {
+    discord.destroy().then(() => {
+      process.exit();
+    });
+  });
 }
 
-["beforeExit", "disconnect", "exit", "message", "uncaughtException", "unhandledRejection", "SIGINT", "SIGTERM", "SIGUSR1", "SIGUSR2", "SIGHUP", "SIGBREAK"].forEach((eventType) => {
+["beforeExit", "disconnect", "exit", "message", "uncaughtException", "unhandledRejection", "SIGINT", "SIGTERM", "SIGUSR1", "SIGUSR2", "SIGHUP", "SIGBREAK"].forEach((eventType: any) => {
   process.on(eventType, exitHandler.bind(null, {exit: true}));
 });

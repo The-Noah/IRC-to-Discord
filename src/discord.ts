@@ -1,8 +1,6 @@
-"use strict";
+import config from "./config";
 
-const config = require("../config");
-
-const discord = require("discord.js");
+import * as discord from "discord.js";
 
 const client = new discord.Client();
 
@@ -20,7 +18,8 @@ client.on("message", message => {
     return;
   }
 
-  message.content = message.content.replace(message.mentions.members.first(), "");
+  console.log(message.mentions.members.first().toString());
+  message.content = message.content.replace(message.mentions.members.first().toString(), "");
   message.content = message.content.trim();
 
   console.log(`[Discord] Got ${message.content}`);
@@ -32,4 +31,12 @@ client.on("message", message => {
 
 client.login(config.discord.token);
 
-module.exports = client;
+function send(channel: discord.Channel, message: string){
+  if(!channel || !((channel): channel is discord.TextChannel => channel.type === "text")(channel)){
+    return;
+  }
+
+  channel.send(message);
+}
+
+export {client as default, send};

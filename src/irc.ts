@@ -1,8 +1,6 @@
-"use strict";
+import config from "./config";
 
-const config = require("../config");
-
-const irc = require("irc");
+import * as irc from "irc";
 
 const channels = [];
 
@@ -23,4 +21,4 @@ client.on("error", message => {
   console.log("[IRC] Error: ", message);
 });
 
-module.exports = client;
+export {client as default};

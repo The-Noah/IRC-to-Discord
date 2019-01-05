@@ -11,7 +11,7 @@ It is easy to get started with the following steps.
 * [Node.js](https://nodejs.org/ "Node.js Website") (v10.13.0 or above recommended)
 * NPM (v6.4.1 or above recommended)
 * [Discord application with a bot enabled](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token "Creating a Discord Bot & Getting a Token")
-* Some free disk space (3MB+ recommended)
+* Some free disk space (50MB+ recommended)
 
 ## Installing
 
@@ -46,7 +46,7 @@ The configuration file should be called `config.json` in order for it to run by 
 
 # Running
 
-Open the terminal within the directory and run either `npm start`, `node .` or `node src/app.js`.
+Open the terminal within the directory and run `npm run tsc` to build the app. Once it's built, run either `npm start`, `node .` or `node build/app.js` to start it.
 
 One started, the bot will provide a Discord invite link. To check if the bot is online, send 'ping' and mention the bot within the message and if it is online, it will reply with a 'pong'.
 

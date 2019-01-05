@@ -2,9 +2,11 @@
   "name": "irc-to-discord",
   "version": "2.0.2",
   "description": "Log IRC message to Discord",
-  "main": "src/app.js",
+  "main": "build/app.js",
   "scripts": {
     "start": "node .",
+    "tsc": "node ./node_modules/typescript/bin/tsc",
+    "watch": "tsc -w",
     "test": "exit 0"
   },
   "repository": {
@@ -20,5 +22,10 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "irc": "^0.5.2"
+  },
+  "devDependencies": {
+    "@types/irc": "^0.3.32",
+    "@types/node": "^10.12.18",
+    "typescript": "^3.2.2"
   }
 }
