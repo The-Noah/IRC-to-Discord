@@ -60,7 +60,7 @@ One started, the bot will provide a Discord invite link. To check if the bot is 
 
 # License
 
-IRC to Discord is licensed under the MIT License. See the included [LICENESE](LICENSE) file for details.
+IRC to Discord is licensed under the MIT License. See the included [LICENESE.md](LICENSE.md) file for details.
 
 [build]: https://travis-ci.org/The-Noah/IRC-to-Discord.png?branch=master
 [node]: https://img.shields.io/badge/node.js-v10.13.0-red.svg
