@@ -3,12 +3,12 @@ import config from "./config";
 import irc from "./irc";
 import {default as discord, send} from "./discord";
 
-irc.on("registered", message => {
-  //console.log("[IRC] Message:", message);
+import * as ircColors from "irc-colors";
 
+irc.on("registered", message => {
   config.discord.channels.forEach(channel => {
     channel.ircChannels.forEach(ircChannel => {
-      send(discord.channels.get(channel.id), `\[**INFO**] Listening on IRC channel ${ircChannel}`);
+      send(discord.channels.get(channel.id), `[${new Date().toISOString().replace(/T/, " ").replace(/\..+/, "")}] Listening on IRC channel ${ircChannel}`);
     });
   });
 });
@@ -16,12 +16,14 @@ irc.on("registered", message => {
 config.discord.channels.forEach(channel => {
   channel.ircChannels.forEach(ircChannel => {
     irc.on(`message${ircChannel}`, (from, message) => {
-      // cleanup messages
-      from = from.replace(/[^\x20-\x7E]/g, "");
-      message = message.replace(/[^\x20-\x7E]/g, "");
-    
+      // remove irc colors and styles
+      message = ircColors.stripColorsAndStyle(message);
+      
       console.log(`[${ircChannel}] ${from}: ${message}`);
-    
+      
+      // remove markdown from sender
+      from = from.replace("*", "\\*").replace("_", "\\_");
+      
       send(discord.channels.get(channel.id), `[${ircChannel}] **${from}**: ${message}`);
     });
   });
